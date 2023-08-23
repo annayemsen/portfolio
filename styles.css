@@ -1,0 +1,62 @@
+svg {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  z-index: 10;
+}
+
+svg path {
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: black;
+  fill: none;
+  transition: all 0.5s ease-in-out;
+}
+
+/* In menu form */
+
+.top_bar,
+.bottom_bar {
+  stroke-dasharray: 240px 910px;
+}
+
+.middle_bar {
+  stroke-dasharray: 240px 240px;
+}
+
+/* In cross form */
+
+.open .top_bar,
+.open .bottom_bar {
+  stroke-dashoffset: -650px;
+}
+
+.open .middle_bar {
+  stroke-dasharray: 0px 220px;
+  stroke-dashoffset: -120px;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #ffefba;
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+
+.navigation.active {
+  transform: translateX(0);
+}
+
+.navigation li {
+  list-style-type: none;
+}
