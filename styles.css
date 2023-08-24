@@ -11,14 +11,17 @@
 }
 body {
   font-family: var(--main-font);
+  color: var(--main-color);
   background-color: var(--light-color);
+}
+main {
+  padding: 40px 40px 0 40px;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 50px;
 }
 header {
   position: fixed;
-  background-color: rgba(229, 229, 229, 0.3);
+  background-color: rgba(229, 229, 229, 0.9);
   width: 100%;
   top: 0;
   right: 0;
@@ -80,8 +83,167 @@ header {
   top: 65px;
   right: 40px;
 }
-@media screen and (max-width: 700px) {
-  svg {
+h1,
+h2 {
+  font-family: var(--primary-font);
+}
+h2 {
+  font-size: 35px;
+}
+h1 {
+  font-size: 50px;
+}
+h3 {
+  font-family: var(--main-font);
+  font-size: 23px;
+}
+h1 {
+  display: inline;
+  position: relative;
+  z-index: 5;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: var(--accent-color);
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  z-index: -5;
+  opacity: 0.3;
+}
+.about-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.about-button:hover {
+  box-shadow: 0px 15px 20px rgba(117, 161, 162, 0.5);
+  transform: translateY(-5px);
+}
+
+.about-button:active {
+  transform: translateY(-1px);
+}
+.home-description {
+  border-bottom: 1px solid rgba(117, 161, 162, 0.5);
+  padding: 100px 0 40px;
+}
+.projects-container {
+  padding: 40px 0;
+}
+h4 {
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-size: 35px;
+}
+.project-number {
+  font-family: var(--primary-font);
+  font-size: 50px;
+  color: var(--accent-color);
+  opacity: 0.4;
+  line-height: 1;
+}
+h5 {
+  font-size: 40px;
+  font-family: var(--primary-font);
+}
+.project-description {
+  font-size: 20px;
+}
+.project-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.project-button:hover {
+  box-shadow: 0px 15px 20px rgba(117, 161, 162, 0.5);
+  transform: translateY(-5px);
+}
+
+.projectt-button:active {
+  transform: translateY(-1px);
+}
+footer {
+  background-color: var(--main-color);
+  padding: 20px 40px;
+  color: var(--light-color);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.footer-content div:nth-child(1) {
+  font-size: 25px;
+}
+.footer-links a {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+@media screen and (max-width: 992px) {
+  .home-description {
+    padding-top: 50px;
+  }
+  .fixed {
+    overflow: hidden;
+    height: 100vh;
+  }
+  .social svg {
+    width: 30px;
+  }
+  .sidebar {
+    right: 18px;
+  }
+  .about-project {
+    padding: 15px !important;
+    position: relative;
+  }
+  .project-number {
+    font-size: 55px;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+  }
+  .project-name {
+    font-size: 35px;
+  }
+  .project-description {
+    font-size: 18px;
+  }
+  footer {
+    padding: 20px 40px;
+  }
+  .footer-content div:nth-child(1) {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-icon {
     display: block;
     cursor: pointer;
     position: fixed;
@@ -91,7 +253,7 @@ header {
     z-index: 10;
   }
 
-  svg path {
+  .menu-icon path {
     stroke-width: 25;
     stroke-linecap: round;
     stroke: black;
@@ -126,7 +288,7 @@ header {
     left: 0;
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 40px;
     background: var(--main-color);
     transform: translateY(-100%);
     transition: transform 0.5s;
@@ -136,11 +298,69 @@ header {
     color: white;
     margin: 15px 0;
   }
+  .nav__link:hover {
+    text-decoration: underline;
+  }
   .nav__link:before {
     display: none;
   }
 
   .navigation.active {
     transform: translateY(0);
+  }
+  .sidebar {
+    display: none;
+  }
+  .img-container {
+    display: none;
+  }
+  .about-project {
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .about-project::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid rgba(117, 161, 162, 0.5);
+    border-right: 2px solid rgba(117, 161, 162, 0.5);
+    height: 60%;
+    width: 50%;
+    right: 0px;
+    top: 0px;
+  }
+  .project-number {
+    top: 10px;
+  }
+  h5 {
+    position: relative;
+    display: inline-block;
+  }
+  h5::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    background-color: var(--accent-color);
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 20px;
+    z-index: -5;
+    opacity: 0.3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1::before {
+    display: none;
+  }
+  .footer-content div:nth-child(1) {
+    font-size: 18px;
+  }
+  .footer-content div:nth-child(2) {
+    display: none;
+  }
+  .footer-links a {
+    font-size: 16px;
   }
 }
