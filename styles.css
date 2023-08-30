@@ -18,6 +18,7 @@ main {
   padding: 100px 40px 0 40px;
   max-width: 1320px;
   margin: 0 auto;
+  min-height: calc(100vh - 101px);
 }
 header {
   position: fixed;
@@ -86,6 +87,9 @@ header {
 h1,
 h2 {
   font-family: var(--primary-font);
+}
+br {
+  display: none;
 }
 h2 {
   font-size: 35px;
@@ -242,6 +246,15 @@ footer {
   .footer-content div:nth-child(1) {
     font-size: 23px;
   }
+  .about__main-content {
+    position: relative;
+  }
+  .profile-picture {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    width: 200px;
+  }
 }
 @media screen and (max-width: 768px) {
   .menu-icon {
@@ -349,9 +362,20 @@ footer {
     z-index: -5;
     opacity: 0.3;
   }
+  .profile-picture {
+    top: 40px;
+    width: 250px;
+  }
+  br {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .profile-picture {
+    width: 200px;
+    top: 50px;
+  }
   h1::before {
     display: none;
   }
@@ -368,32 +392,15 @@ footer {
 
 /* about page */
 .profile-picture {
-  max-width: 400px;
+  max-width: 500px;
   display: block;
   margin: 0 auto;
 }
-.picture-bg-light {
-  background: rgb(117, 161, 162);
-  background: radial-gradient(
-    circle,
-    rgba(117, 161, 162, 0.8772759103641457) 0%,
-    rgba(229, 229, 229, 0.6671918767507004) 61%
-  );
-  background-position: -50px;
-}
-.picture-bg {
-  background: rgb(9, 13, 121);
-  background: radial-gradient(
-    circle,
-    rgba(9, 13, 121, 0.9529914529914529) 0%,
-    rgba(229, 229, 229, 0.6671918767507004) 61%
-  );
-  background-position: 50px;
-}
+
 .about-me-description {
   display: block;
   margin: auto;
 }
-.about__name::before {
-  width: 78%;
+.about-me-description p {
+  margin-top: 20px;
 }
