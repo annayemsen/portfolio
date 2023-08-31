@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anna Stepanenko</title>
+    <title>Frontend developer Anna Stepanenko</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="Frontend developer based in Kyiv. Open for new projects."
+    />
   </head>
   <body>
     <header>
@@ -36,10 +40,10 @@
       </svg>
       <a href="index.html" class="logo">Anna Stepanenko</a>
       <nav class="navigation">
-        <a class="nav__link" href="index.html">HOME</a>
-        <a class="nav__link" href="about.html">ABOUT ME</a>
-        <a class="nav__link" href="projects.html">PROJECTS</a>
-        <a class="nav__link" href="contacts.html">CONTACTS</a>
+        <a class="nav__link" href="index.html" title="home">HOME</a>
+        <a class="nav__link" href="about.html" title="about me">ABOUT ME</a>
+        <a class="nav__link" href="projects.html" title="projects">PROJECTS</a>
+        <a class="nav__link" href="contacts.html" title="contacts">CONTACTS</a>
       </nav>
     </header>
     <div class="sidebar">
@@ -152,7 +156,9 @@
         <h2>Hello!</h2>
         <h1>I'm Anna Stepanenko</h1>
         <h3 class="my-4">Front-end developer based in Kyiv</h3>
-        <a href="about.html" class="about-button"> About me </a>
+        <a href="about.html" class="about-button" title="about me">
+          About me
+        </a>
       </div>
       <div class="projects-container">
         <h4 class="mb-4">Latest projects</h4>
@@ -169,7 +175,9 @@
               aspernatur voluptatibus tenetur ea minus qui, nesciunt inventore
               harum corporis natus deleniti.
             </p>
-            <a class="project-button" href="#">DETAILS</a>
+            <a class="project-button" href="#" title="yogurt app details"
+              >DETAILS</a
+            >
           </div>
         </div>
         <div class="row g-0">
@@ -182,7 +190,9 @@
               repellendus harum. Incidunt voluptate repellat, dolorum quas est
               voluptatem rem voluptas reprehenderit odio!
             </p>
-            <a class="project-button" href="#">DETAILS</a>
+            <a class="project-button" href="#" title="weather app details"
+              >DETAILS</a
+            >
           </div>
           <div class="col img-container">
             <img class="img-fluid" src="img/weather.png" alt="weather app" />
@@ -205,7 +215,9 @@
               repellendus harum. Incidunt voluptate repellat, dolorum quas est
               voluptatem rem voluptas reprehenderit odio!
             </p>
-            <a class="project-button" href="#">DETAILS</a>
+            <a class="project-button" href="#" title="dictionary app details"
+              >DETAILS</a
+            >
           </div>
         </div>
       </div>
@@ -217,8 +229,12 @@
           <div>Anna Stepanenko</div>
         </div>
         <div class="footer-links">
-          <a href="mailto:iamann1311@gmail.com">iamann1311@gmail.com</a>
-          <a class="align-bottom" href="tel:+380678828221">+380678828221</a>
+          <a href="mailto:iamann1311@gmail.com" title="email"
+            >iamann1311@gmail.com</a
+          >
+          <a class="align-bottom" href="tel:+380678828221" title="phone number"
+            >+380678828221</a
+          >
         </div>
       </div>
     </footer>
