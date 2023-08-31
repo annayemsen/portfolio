@@ -223,6 +223,9 @@ footer {
 .about-me-description p {
   margin-top: 20px;
 }
+.sidebar__contacts {
+  display: none;
+}
 @media screen and (max-width: 1000px) {
   .h1__projects::before {
     display: none;
@@ -421,5 +424,8 @@ footer {
   }
   .h1__projects {
     font-size: 35px;
+  }
+  .h__contacts {
+    font-size: 40px;
   }
 }
